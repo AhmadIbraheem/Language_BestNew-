@@ -1,0 +1,117 @@
+.downloadApp {
+  background-color: #5089c6;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+}
+.downloadApp h1 {
+  color: #fff;
+  font-size: 4em;
+}
+.downloadApp span {
+  color: #ffaa4c;
+}
+.downloadApp h3 {
+  font-size: 1.5em;
+}
+.carousal_contaier {
+  flex: 1;
+}
+.carousal_contaier img {
+  width: 40%;
+  margin-top: 10%;
+  margin-right: 40%;
+}
+.downloadApp .cont {
+  flex: 1;
+}
+.downloadApp .content {
+  margin-top: 20%;
+  margin-right: 0%;
+  /* margin-left: 40%; */
+}
+.downloadApp .btn {
+  display: flex;
+  padding-top: 5px;
+}
+.downloadApp .download_button {
+  width: 100%;
+  height: 40px;
+}
+
+@media (max-width: 728px) {
+  .downloadApp {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .downloadApp .carousal_contaier img {
+    width: 50%;
+    margin-top: 10%;
+    position: absolute;
+    left: 26%;
+  }
+  .downloadApp .content {
+    margin-top: 90%;
+    text-align: center;
+  }
+  .downloadApp h1 {
+    font-size: 2em;
+  }
+  .downloadApp h3 {
+    font-size: 1.5em;
+  }
+  .downloadApp .btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+  }
+  .downloadApp .btn img {
+    width: 80%;
+  }
+  .downloadApp #apple {
+    margin-top: 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .downloadApp {
+    justify-content: center;
+  }
+  .downloadApp .carousal_contaier img {
+    width: 60%;
+    margin-top: 14%;
+    margin-right: 15%;
+  }
+  .downloadApp .carousal_contaier {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+  }
+  .downloadApp .content {
+    /* margin-left: 20%;
+      margin-right: 20%; */
+    text-align: center;
+    margin-top: 35%;
+    margin-left: 20%;
+  }
+  .downloadApp .content h1 {
+    font-size: 45px;
+  }
+  .downloadApp .content h3 {
+    margin: 10%;
+    font-size: 25px;
+  }
+  .downloadApp .btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+  }
+  .downloadApp .btn #home {
+    margin: 5%;
+  }
+  .downloadApp .download_button {
+    width: 97%;
+  }
+}

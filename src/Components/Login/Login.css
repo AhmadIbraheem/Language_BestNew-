@@ -1,0 +1,181 @@
+@import "../../global.css";
+.login * {
+  box-sizing: border-box;
+}
+.login .popup-box {
+  position: fixed;
+  background-color: #035397;
+  /* background-color: white; */
+  width: 25%;
+  height: 90;
+  top: 5%;
+  left: 40%;
+  z-index: 100;
+  border-radius: 5px;
+}
+.login {
+  background-color: #035397;
+  color: #fff;
+  /* color: var(--dark_blue); */
+  margin: 0;
+  min-height: 100%;
+}
+.login .align {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.login .align__item--start {
+  align-self: flex-start;
+}
+.login .align__item--end {
+  align-self: flex-end;
+}
+.login .site__logo {
+  margin-bottom: 2rem;
+}
+.login input {
+  border: 0;
+  font: inherit;
+}
+.login input::placeholder {
+  color: rgba(255, 255, 255, 0.459);
+  /* color: var(--dark_blue); */
+}
+.login .form__field {
+  margin-bottom: 1rem;
+}
+.login .form input {
+  outline: 0;
+  padding: 0.5rem 1rem;
+}
+.login .form input[type="email"],
+.login .form input[type="password"] {
+  width: 100%;
+}
+.login .grid {
+  margin: 0 auto;
+  max-width: 25rem;
+  width: 100%;
+}
+.login h2 {
+  font-size: 2.75rem;
+  font-weight: 100;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+.login svg {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.login a {
+  color: #ffaa4c;
+}
+.login .register {
+  box-shadow: 0 0 250px #000;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.login .register input {
+  border: 1px solid #242c37;
+  border-radius: 999px;
+  background-color: transparent;
+  text-align: center;
+}
+.login .register input[type="email"],
+.login .register input[type="password"] {
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: 1rem 50%;
+}
+
+.login .register input[type="submit"] {
+  /* background-image: linear-gradient(160deg, #ffaa4c 0%, #5089c6 100%); */
+  /* color: #fff; */
+  background-color: var(--orange);
+  color: #fff;
+  /* color: var(--dark_blue); */
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.login .register .logo {
+  width: 50%;
+}
+.login .register .close {
+  position: fixed;
+  top: 30px;
+  right: 35%;
+
+  width: 4%;
+}
+.login .register .down {
+  margin-top: 0;
+}
+
+.login .register .intro_button {
+  border: 1px solid #fff;
+  /* border: 1px solid var(--dark_blue); */
+  display: flex;
+  border-radius: 30px;
+  text-align: center;
+  width: 250px;
+  height: 25px;
+  padding-bottom: 2rem;
+  cursor: pointer;
+  margin-top: -10px;
+}
+.login .register .intro_button .googleImage {
+  margin-top: -8px;
+  flex: 1;
+}
+.login .register .intro_button img {
+  width: 40%;
+}
+.login .register .intro_button .googleText {
+  flex: 2;
+  text-align: center;
+  line-height: 100%;
+}
+@media (max-width: 728px) {
+  .login .popup-box {
+    position: fixed;
+    background-color: #035397;
+    /* background-color: white; */
+    width: 80%;
+    height: 88vh;
+    top: 10%;
+    left: 10%;
+    z-index: 100;
+    border-radius: 5px;
+  }
+  .login .register .close {
+    position: fixed;
+    top: 12%;
+    right: 15%;
+    width: 10%;
+  }
+  .login h1 {
+    font-size: 20px;
+  }
+  .login p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .login .popup-box {
+    position: fixed;
+    width: 40%;
+    height: 90;
+    top: 20%;
+    left: 30%;
+    z-index: 100;
+    border-radius: 5px;
+  }
+  .login .register .close {
+    position: fixed;
+    top: 20%;
+    right: 30%;
+    width: 8%;
+  }
+}

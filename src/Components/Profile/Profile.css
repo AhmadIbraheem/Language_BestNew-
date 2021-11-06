@@ -1,0 +1,173 @@
+@import "../../global.css";
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+.profile .side {
+  flex: 1;
+  margin-top: 4%;
+}
+.profile .side img {
+  width: 60%;
+}
+.profile .space {
+  border: 2px solid #e5e5e5;
+  border-radius: 16px;
+  display: block;
+
+  text-align: center;
+  background-color: #d9e4f5;
+  color: var(--dark_blue);
+  margin: 14%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+
+.profile .middle {
+  flex: 2;
+  /* justify-content: center;
+  align-self: center; */
+  background-color: var(--light_blue);
+  border: 2px solid #e5e5e5;
+  border-radius: 16px;
+}
+.profile .middle .header {
+  display: flex;
+  flex-direction: column;
+  margin: 14%;
+  height: 15%;
+  padding: 50px;
+  margin-bottom: 4%;
+  margin-top: 10%;
+}
+.profile .middle .header .profilePicture {
+  width: 100%;
+}
+.profile .middle .header .profilePicture img {
+  border: 1px solid #e5e5e5;
+  border-radius: 100%;
+  width: 40%;
+  vertical-align: middle;
+
+  margin-top: -26%;
+}
+.profile .middle .header .profileTitle {
+  align-self: center;
+  font-size: 35px;
+  margin-top: 4%;
+}
+.profile .tries {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.profile .tries h3 {
+  margin: 6%;
+  font-size: 25px;
+  /* margin-right: 15%; */
+}
+.profile .tries img {
+  padding: 5%;
+  width: 7%;
+  /* margin-left: 15%; */
+}
+
+.profile .achievementsIcons h3 {
+  font-size: 25px;
+}
+.profile .levels {
+  margin-top: 4%;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 4%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.profile .levels .level {
+  text-align: center;
+  margin: 10px;
+}
+.profile .levels .level img {
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+  width: 90%;
+}
+
+@media (max-width: 728px) {
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile .middle {
+    border-radius: 0px;
+    border-radius: 20px;
+    margin: 2%;
+    padding-bottom: 10%;
+  }
+
+  .profile .middle .header .profilePicture img {
+    border: 1px solid #e5e5e5;
+    border-radius: 100%;
+    width: 60%;
+    vertical-align: middle;
+
+    margin-top: -56%;
+  }
+  .profile .middle .header .profileTitle {
+    align-self: center;
+    font-size: 19px;
+    margin-top: 2%;
+    margin-bottom: 0px;
+  }
+  .profile .tries {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .profile .tries img {
+    padding: 4%;
+    width: 16%;
+    /* margin-left: 15%; */
+  }
+  .profile .tries h3 {
+    margin: 6%;
+    font-size: 15px;
+    /* margin-right: 15%; */
+  }
+  .profile .levels {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .profile .middle {
+    padding-bottom: 10%;
+  }
+  .profile .middle .header .profileTitle {
+    align-self: center;
+    font-size: 25px;
+  }
+  .profile .tries img {
+    padding: 4%;
+    width: 16%;
+    /* margin-left: 15%; */
+  }
+  .profile .tries h3 {
+    margin: 6%;
+    font-size: 19px;
+    /* margin-right: 15%; */
+  }
+  .profile .space {
+    text-align: center;
+    background-color: #d9e4f5;
+    color: var(--dark_blue);
+    margin: 10%;
+  }
+  .profile .space .levels {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

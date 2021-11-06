@@ -1,0 +1,118 @@
+/* @keyframes loader {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 10%;
+  }
+  25% {
+    width: 24%;
+  }
+  43% {
+    width: 41%;
+  }
+  56% {
+    width: 50%;
+  }
+  66% {
+    width: 52%;
+  }
+} */
+
+@import "../../global.css";
+.progressFather {
+  display: flex;
+  flex-direction: column;
+}
+.progressFather .bar {
+  display: flex;
+}
+.progressFather .tries {
+  text-align: center;
+  color: var(--dark_blue);
+  font-weight: 700;
+  /* position: relative;
+  right: 8%;
+  margin-top: 2%;
+  top: 15%; */
+  margin-bottom: 0;
+}
+
+.progressFather .cancel {
+  margin-top: 1%;
+  margin-right: 10%;
+}
+/* .progressFather .cancel img {
+  margin-right: 100%;
+  width: 200%;
+} */
+.progressTop {
+  margin: 10%;
+  margin-top: 2.5%;
+  margin-bottom: 0;
+
+  width: 70%;
+  height: 20px;
+  border: solid var(--grey) 4px;
+  border-radius: 20px;
+}
+.progress {
+  background: var(--green);
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  width: 0;
+}
+/* .progress-bar {
+  border-radius: 60px;
+  overflow: hidden;
+  width: 20%;
+  margin: 20%;
+
+  border: 20px double #000;
+}
+.progress-bar span {
+  display: block;
+  margin: 20%;
+  border: 20px double #000;
+}
+.bar {
+  background: rgba(0, 0, 0, 0.075);
+  border: 20px double #000;
+}
+.progress {
+  margin: 20%;
+  animation: loader 8s ease infinite;
+  background: #75b800;
+  color: #fff;
+  padding: 5px;
+  width: 0;
+}
+.progress-bar {
+  left: 50%;
+  max-width: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+} */
+@media (max-width: 728px) {
+  .progressFather .cancel {
+    margin-right: 0;
+  }
+  .progressFather .progressTop {
+    margin-top: 8%;
+    margin-right: 2%;
+    margin-left: 0;
+  }
+  .progressFather .tries {
+    margin-bottom: 3%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .progressFather .progressTop {
+    margin-top: 4.5%;
+    margin-right: 6%;
+    margin-left: 0;
+  }
+}

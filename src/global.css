@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #edf2fc;
+  --secondary-color: #212121;
+  --orange: #ffaa4c;
+  --light_blue: #5089c6;
+  --middle_blue: #035397;
+  --dark_blue: #001e6c;
+
+  --green: #61e002;
+  --red: #ff5252;
+  --grey: #e5e5e5;
+}
+* {
+  font-weight: 700;
+  font-family: "Lemonada", cursive;
+}

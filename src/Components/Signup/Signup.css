@@ -1,0 +1,174 @@
+@import "../../global.css";
+.signup * {
+  box-sizing: border-box;
+}
+.signup .popup-box {
+  position: fixed;
+  background-color: #035397;
+  /* background-color: white; */
+  width: 25%;
+  height: 90;
+  top: 5%;
+  left: 40%;
+  z-index: 100;
+  border-radius: 5px;
+}
+.signup {
+  background-color: #035397;
+  color: #fff;
+  font: 300 1rem/1.5 Helvetica Neue, sans-serif;
+  margin: 0;
+  min-height: 100%;
+}
+.signup .align {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.signup .align__item--start {
+  align-self: flex-start;
+}
+.signup .align__item--end {
+  align-self: flex-end;
+}
+.signup .site__logo {
+  margin-bottom: 2rem;
+}
+.signup input {
+  border: 0;
+  font: inherit;
+}
+.signup input::placeholder {
+  color: rgba(255, 255, 255, 0.459);
+}
+.signup .form__field {
+  margin-bottom: 1rem;
+}
+.signup .form input {
+  outline: 0;
+  padding: 0.5rem 1rem;
+}
+.signup .form input[type="email"],
+.signup .form input[type="password"] {
+  width: 100%;
+}
+.signup .grid {
+  margin: 0 auto;
+  max-width: 25rem;
+  width: 100%;
+}
+.signup h2 {
+  font-size: 2.75rem;
+  font-weight: 100;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+.signup svg {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.signup a {
+  color: #ffaa4c;
+}
+.signup .register {
+  box-shadow: 0 0 250px #000;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.signup .register input {
+  border: 1px solid #242c37;
+  border-radius: 999px;
+  background-color: transparent;
+  text-align: center;
+}
+.signup .register input[type="email"],
+.signup .register input[type="password"] {
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: 1rem 50%;
+}
+
+.signup .register input[type="submit"] {
+  /* background-image: linear-gradient(160deg, #ffaa4c 0%, #5089c6 100%); */
+  background-color: var(--orange);
+
+  color: #fff;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.signup .register .logo {
+  width: 50%;
+}
+
+.signup .register .close {
+  position: fixed;
+  top: 30px;
+  right: 35%;
+
+  width: 4%;
+}
+.signup .register .down {
+  margin-top: 0;
+}
+.signup .register .intro_button {
+  border: 1px solid #fff;
+  /* border: 1px solid var(--dark_blue); */
+  display: flex;
+  border-radius: 30px;
+  text-align: center;
+  width: 250px;
+  height: 25px;
+  padding-bottom: 2rem;
+  cursor: pointer;
+  margin-top: -10px;
+}
+.signup .register .intro_button .googleImage {
+  margin-top: -8px;
+  flex: 1;
+}
+.signup .register .intro_button img {
+  width: 40%;
+}
+.signup .register .intro_button .googleText {
+  flex: 2;
+  text-align: center;
+  line-height: 100%;
+}
+
+@media (max-width: 728px) {
+  .signup .popup-box {
+    position: fixed;
+    background-color: #035397;
+    /* background-color: white; */
+    width: 80%;
+    height: 90vh;
+    top: 5%;
+    left: 10%;
+    z-index: 100;
+    border-radius: 5px;
+  }
+  .signup .register .close {
+    position: fixed;
+    top: 6%;
+    right: 15%;
+    width: 10%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .signup .popup-box {
+    position: fixed;
+    width: 40%;
+    height: 90;
+    top: 20%;
+    left: 30%;
+    z-index: 100;
+    border-radius: 5px;
+  }
+  .signup .register .close {
+    position: fixed;
+    top: 20%;
+    right: 30%;
+    width: 8%;
+  }
+}
