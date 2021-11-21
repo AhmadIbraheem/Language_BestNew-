@@ -2,6 +2,10 @@
 .login * {
   box-sizing: border-box;
 }
+.login .register {
+  background-color: var(--middle_blue);
+  height: 90vh;
+}
 .login .popup-box {
   position: fixed;
   background-color: #035397;
@@ -12,6 +16,7 @@
   left: 40%;
   z-index: 100;
   border-radius: 5px;
+  font-size: 0.6rem;
 }
 .login {
   background-color: #035397;
@@ -119,11 +124,13 @@
   display: flex;
   border-radius: 30px;
   text-align: center;
-  width: 250px;
-  height: 25px;
+  width: 100%;
+  height: 20px;
   padding-bottom: 2rem;
   cursor: pointer;
   margin-top: -10px;
+  margin-left: 0;
+  font-size: 0.9rem;
 }
 .login .register .intro_button .googleImage {
   margin-top: -8px;
@@ -155,18 +162,33 @@
     right: 15%;
     width: 10%;
   }
+  .login .register .intro_button {
+    width: 100%;
+    height: 10px;
+    padding-bottom: 2rem;
+    cursor: pointer;
+    margin-top: -10px;
+    margin-left: 0;
+    font-size: 0.9rem;
+  }
   .login h1 {
     font-size: 20px;
   }
   .login p {
     font-size: 20px;
   }
+  .login .down p {
+    font-size: 15px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .login .register {
+    height: 55vh;
+  }
   .login .popup-box {
     position: fixed;
     width: 40%;
-    height: 90;
+    height: 55vh;
     top: 20%;
     left: 30%;
     z-index: 100;

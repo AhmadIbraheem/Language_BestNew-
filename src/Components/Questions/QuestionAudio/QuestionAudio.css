@@ -83,6 +83,21 @@
 .questionAudio .singleValue:hover {
   background-color: var(--light_blue);
 }
+.questionAudio .btns div {
+  width: 160px;
+  height: 50px;
+  border-radius: 10%;
+  cursor: pointer;
+
+  border: solid 2px var(--grey);
+  text-align: center;
+
+  line-height: 50px;
+  font-size: 20px;
+  color: var(--dark_blue);
+  margin: 2%;
+}
+
 .questionAudio .result .popup-box {
   position: fixed;
   /* background-color: white; */
@@ -100,8 +115,9 @@
     justify-content: center;
     order: 0;
   }
-  .questionAudio .left:hover {
-    padding: 0%;
+  .questionAudio .left {
+    width: 100%;
+    height: 100%;
   }
   .questionAudio .left img {
     width: 40%;
@@ -110,12 +126,27 @@
     width: auto;
   }
   .questionAudio .box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 30%;
+    padding: 15px;
+    margin: 5px;
     border-radius: 10px;
-
     border: 1px solid #b2b1b9;
-    /* margin-left: 40%;
-    margin-right: 30%; */
-    text-align: center;
+    font-family: inherit;
+
     cursor: pointer;
+  }
+  .questionAudio .singleValue {
+    background-color: var(--orange);
+    width: 100%;
+    height: 40px;
+    margin: 5%;
+
+    border-radius: 10%;
+    /* padding: 2%; */
+    text-align: center;
   }
 }

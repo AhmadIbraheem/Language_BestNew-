@@ -30,9 +30,10 @@
   font-size: 30px;
   color: var(--dark_blue);
   margin: auto;
+  margin-top: 6%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 728px) {
   .correctAnswer {
     margin: 10%;
     display: flex;
@@ -43,6 +44,7 @@
   }
   .correctAnswer .img img {
     margin: 3%;
+    margin-top: 5%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -51,6 +53,9 @@
   .correctAnswer .answer {
     margin: auto;
     text-align: center;
+  }
+  .correctAnswer .continue {
+    margin-bottom: 2%;
   }
 }
 

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import './Login.css';
 import axios from 'axios';
 import Context from '../../Store/Context';
-import { signInWithGoogle } from '../../service/firebase';
+import { signInWithGoogle } from '../../Firebase';
 
 function Login(props) {
     const { globale, actions } = useContext(Context);
@@ -14,36 +14,43 @@ function Login(props) {
     const [token, setToken] = useState("");
     let token1 = "";
     const changeEmailHandler = (e) => {
-
-        // console.log(e.target.name);
         setInputData(prevState => ({
             ...prevState,
             email: e.target.value
         }));
-        // console.log(inputData.email);
     }
     const changePasswordHandler = (e) => {
 
-        // console.log(e.target.name);
         setInputData(prevState => ({
             ...prevState,
             password: e.target.value
         }));
-        //   console.log(inputData.email);
     }
-    console.log(inputData)
+    const scoreApi = "http://api-staging.languagebest.com/api/users/score";
 
+    const postLocaleData = () => {
+        var item = JSON.parse(localStorage.getItem('progressDataNew') || "[]");
+        // hereeeeeeeeeeeeeeeeeeee
+        const id = localStorage.getItem('id') || "";
+        const config = {
+            headers: { Authorization: `Bearer ${token1}` }
+        };
+        if (item.length > 0) {
+            item.map((data, index) =>
+                axios.post(scoreApi, data, config).then(response => {
+                    console.log(response);
+                })
+            )
+            localStorage.removeItem("progressDataNew");
+        }
+    }
     const submitHandler = e => {
         e.preventDefault();
 
-        axios.post('https://staging.languagebest.com/api/Authentication/login', inputData)
+        axios.post('https://api-staging.languagebest.com/api/Authentication/login', inputData)
             .then(response => {
                 if (response.data.isResultExist === true) {
-                    // welcoming 
-                    alert("Welcome " + response.data.result.token);
-                    // clode popup
                     props.handleClose();
-                    // save token to globale state
                     token1 = response.data.result.token;
                     actions({
                         type: 'setToken',
@@ -54,14 +61,17 @@ function Login(props) {
                         }
                     });
                     // save login info to local storage
+
                     localStorage.setItem('userToken', token1);
+                    // postLocaleData();
                 }
 
-                // console.log(token1);
-                // console.log(response);
-                // console.log(globale.token);
+
             })
             .catch(error => {
+
+                console.log("errorrrrrrrrrrrr");
+                console.log(error);
                 alert(error);
             })
 

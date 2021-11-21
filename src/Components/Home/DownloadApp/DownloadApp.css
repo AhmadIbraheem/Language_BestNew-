@@ -32,19 +32,41 @@
   margin-right: 0%;
   /* margin-left: 40%; */
 }
+
+.downloadApp .appsContainer {
+  display: flex;
+  flex-direction: row;
+}
+.downloadApp .appsContainer #appsText {
+  color: white;
+  margin-top: 1px;
+}
 .downloadApp .btn {
   display: flex;
+  flex-direction: column;
   padding-top: 5px;
+  margin-left: 2%;
+}
+.downloadApp .downloadBtn {
+  transform: scale(0.9);
+}
+.downloadApp .downloadBtn:hover {
+  opacity: 0.7;
+  transform: scale(0.8);
 }
 .downloadApp .download_button {
   width: 100%;
   height: 40px;
+}
+.downloadApp #apple {
+  margin-right: 10%;
 }
 
 @media (max-width: 728px) {
   .downloadApp {
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
   }
   .downloadApp .carousal_contaier img {
     width: 50%;
@@ -66,12 +88,14 @@
     display: flex;
     justify-content: center;
     padding-top: 0px;
+    margin-right: 14%;
   }
   .downloadApp .btn img {
     width: 80%;
   }
   .downloadApp #apple {
     margin-top: 3%;
+    margin-right: 17%;
   }
 }
 

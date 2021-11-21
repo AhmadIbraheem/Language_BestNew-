@@ -73,17 +73,10 @@
   width: 150px;
   height: 150px;
 }
-
 .levelDemo .levels .level .subLevels .subLevel img {
-  /* margin-top: 10px;
-  margin: 10%;
-  margin-right: 22%; */
-
-  /* height: 80%; */
   border-radius: 100%;
   max-width: 85%;
   display: block;
-  /* border: var(--middle_blue) 2px solid; */
 }
 .levelDemo .levels .level .subLevels .subLevel h3 {
   text-align: center;
@@ -149,7 +142,7 @@
   .levelDemo .levels {
     /* background-color: var(--light_blue); */
     border-radius: 20px;
-    border: 2px solid var(--light_blue);
+    /* border: 2px solid var(--light_blue); */
     margin: 3%;
     flex: 2;
     display: flex;
@@ -160,14 +153,20 @@
   .levelDemo .levels h1 {
     font-size: 20px;
   }
-  .levelDemo .img-line img {
+  /* .levelDemo .img-line img {
     position: absolute;
     top: 38%;
     right: 45%;
     width: 10%;
-  }
+  } */
+
   .levelDemo .levels .level .header {
-    font-size: 12px;
+    width: 49%;
+    height: 30%;
+  }
+
+  .levelDemo .levels .level .subLevels .subLevel {
+    width: 120px;
   }
 }
 
@@ -199,5 +198,13 @@
   }
   .levelDemo .levels .level .header {
     font-size: 12px;
+  }
+  .levelDemo .levels .level .header {
+    width: 45%;
+    height: 30%;
+  }
+
+  .levelDemo .levels .level .subLevels .subLevel {
+    width: 120px;
   }
 }

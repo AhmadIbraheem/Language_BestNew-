@@ -35,8 +35,10 @@
   display: flex;
   flex-direction: column;
   margin: 14%;
-  height: 15%;
-  padding: 50px;
+  /* height: 15%; */
+  padding: 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   margin-bottom: 4%;
   margin-top: 10%;
 }
@@ -53,7 +55,7 @@
 }
 .profile .middle .header .profileTitle {
   align-self: center;
-  font-size: 35px;
+  font-size: 30px;
   margin-top: 4%;
 }
 .profile .tries {
@@ -68,7 +70,7 @@
 }
 .profile .tries img {
   padding: 5%;
-  width: 7%;
+  width: 13%;
   /* margin-left: 15%; */
 }
 
@@ -81,10 +83,31 @@
   margin-right: 30%;
   margin-bottom: 4%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   cursor: pointer;
 }
 .profile .levels .level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0%;
+  margin-bottom: 0%;
+  margin-right: -20%;
+  width: 140px;
+  height: 140px;
+}
+.profile .levels .level img {
+  border-radius: 100%;
+  max-width: 85%;
+  display: block;
+}
+.profile .levels .level h3 {
+  text-align: center;
+  color: var(--dark_blue);
+  font-size: 20px;
+}
+/* .profile .levels .level {
   text-align: center;
   margin: 10px;
 }
@@ -92,7 +115,7 @@
   border: 2px solid var(--orange);
   border-radius: 50%;
   width: 90%;
-}
+} */
 
 @media (max-width: 728px) {
   .profile {
@@ -116,7 +139,7 @@
   }
   .profile .middle .header .profileTitle {
     align-self: center;
-    font-size: 19px;
+    font-size: 20px;
     margin-top: 2%;
     margin-bottom: 0px;
   }
@@ -139,6 +162,20 @@
   .profile .levels {
     margin-left: auto;
     margin-right: auto;
+  }
+  .profile .achievementsIcons h3 {
+    font-size: 20px;
+  }
+  .profile .levels .level {
+    margin: 0%;
+    margin-bottom: 0%;
+    width: 50%;
+    height: 140px;
+  }
+  .profile .levels .level img {
+    border-radius: 100%;
+    max-width: 85%;
+    display: block;
   }
 }
 
@@ -169,5 +206,17 @@
   .profile .space .levels {
     margin-right: auto;
     margin-left: auto;
+  }
+  .profile .levels .level {
+    margin: 0%;
+    margin-bottom: 0%;
+    width: 50%;
+    height: 140px;
+    margin-right: 4%;
+  }
+  .profile .levels .level img {
+    border-radius: 100%;
+    max-width: 85%;
+    display: block;
   }
 }

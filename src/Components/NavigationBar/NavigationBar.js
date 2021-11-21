@@ -19,8 +19,8 @@ export default function NavigationBar() {
                 <label htmlFor="check" className="checkbtn">
                     <MenuIcon />
                 </label>
-                <label className="logo">Languague <span>Best</span></label>
-                <ul>
+                <label className="logo">Languague <span id="best">Best</span></label>
+                <ul style={{ paddingLeft: "0" }}>
                     {(loggedIn > 0) ?
                         <Link to="/" style={{ textDecoration: "none" }}>
                             <li onClick={() => {
@@ -34,7 +34,7 @@ export default function NavigationBar() {
                                 });
                                 localStorage.clear();
                             }}>
-                                LogOut
+                                تسجيل خروج
                             </li>
                         </Link>
                         :
@@ -43,25 +43,30 @@ export default function NavigationBar() {
 
                     <Link to="/" style={{ textDecoration: "none" }}>
                         <li>
-
                             <HomeIcon
                                 fontSize="large"
                                 style={{ position: "relative", top: "10px" }}
                             />
-                            الرئيسية
-
+                            <span style={{
+                                margin: "10px"
+                            }}>
+                                الرئيسية
+                            </span>
                         </li>
                     </Link>
                     <Link to="/profile" style={{
                         color: "#FFF"
                     }}>
                         <li>
-
                             <AccountBoxIcon
                                 fontSize="large"
                                 style={{ position: "relative", top: "10px" }}
                             />
-                            حسابي
+                            <span style={{
+                                margin: "10px"
+                            }}>
+                                حسابي
+                            </span>
 
                         </li>
                     </Link>
@@ -72,8 +77,11 @@ export default function NavigationBar() {
                                 fontSize="large"
                                 style={{ position: "relative", top: "10px" }}
                             />
-                            التقدم
-
+                            <span style={{
+                                margin: "10px"
+                            }}>
+                                التقدم
+                            </span>
                         </li>
                     </Link>
                     <Link to="/form1" >
@@ -83,13 +91,16 @@ export default function NavigationBar() {
                                 fontSize="large"
                                 style={{ position: "relative", top: "10px" }}
                             />
-                            مدونتي
-
+                            <span style={{
+                                margin: "10px"
+                            }}>
+                                مدونتي
+                            </span>
                         </li>
                     </Link>
                 </ul>
             </nav>
 
-        </div >
+        </div>
     )
 }

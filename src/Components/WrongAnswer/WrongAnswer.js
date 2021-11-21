@@ -22,8 +22,8 @@ export default function WrongAnswer(props) {
             </div>
             <div className="answer">
                 <h1> إجابة خاطئة</h1>
-                <h4>الجواب الصحيح:</h4>
-                <p>هنا يظهر الجواب الصحيح</p>
+                {/* <h4>الجواب الصحيح:</h4>
+                <p>هنا يظهر الجواب الصحيح</p> */}
             </div>
             <div className="continue"
                 onClick={handleNextQuestion}>

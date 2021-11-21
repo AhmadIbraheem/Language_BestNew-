@@ -22,7 +22,7 @@
   display: flex;
   width: 280px;
   height: 130px;
-  margin: 4px;
+  margin: 14px;
   border: 2px solid var(--grey);
   border-radius: 20px;
   cursor: pointer;
@@ -35,7 +35,7 @@
 
 .question1 .gridItem img {
   width: 280px;
-  height: 130px;
+  height: 120px;
   border-radius: 20px;
 }
 .question1 .gridItem img:hover {

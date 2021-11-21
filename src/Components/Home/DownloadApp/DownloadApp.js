@@ -11,15 +11,25 @@ export default function DownloadApp() {
                     <h1>Language<span>Best</span></h1>
                     <h3>قم بتنزيل التطبيق اليوم وابدأ في تعلم اللغة لحياتك اليومية.</h3>
                     <div className="btn">
-                        <a href="#home">
-                            <img src="assets/app-store-badge.svg"
-                                id="apple"
-                                alt="" />
-                        </a>
-                        <a href="#home">
-                            <img src="assets/google-play-badge.svg"
-                                className="download_button" alt="" />
-                        </a>
+                        <div className="appsContainer">
+                            <span id="appsText">  حمل التطبيق الاّن</span>
+                            <a href="#home">
+                                <img src="assets/google-play-badge.svg"
+                                    className="download_button downloadBtn" alt="" />
+                            </a>
+
+                        </div>
+                        <div className="appsContainer">
+                            <span id="appsText"> قريبا على المتجر </span>
+                            <a href="#home">
+                                <img src="assets/app-store-badge.svg"
+                                    className=" downloadBtn"
+                                    id="apple"
+                                    alt="" />
+                            </a>
+
+                        </div>
+
                     </div>
                 </div>
             </div>

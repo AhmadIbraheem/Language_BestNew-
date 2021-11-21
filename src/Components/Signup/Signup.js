@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import './Signup.css';
 import axios from 'axios';
-import { signInWithGoogle } from '../../service/firebase';
+import Context from '../../Store/Context';
+import { signInWithGoogle } from '../../Firebase';
+import { useContext } from 'react';
 
 export default function Signup(props) {
+    const { globale, actions } = useContext(Context);
 
     const [inputData, setInputData] = useState({
         firstName: "",
@@ -11,6 +14,11 @@ export default function Signup(props) {
         email: "",
         password: ""
     });
+    const config = {
+        headers: {
+            deviceId: localStorage.getItem('id')
+        }
+    };
     const [token, setToken] = useState("");
     let token1 = "";
     const changeFirstNameHandler = (e) => {
@@ -37,20 +45,49 @@ export default function Signup(props) {
             password: e.target.value
         }));
     }
-    console.log(inputData);
-    const submitHandler = e => {
-        e.preventDefault();
 
-        axios.post('https://staging.languagebest.com/api/Registration/register', inputData)
+    const scoreApi = "http://api-staging.languagebest.com/api/users/score";
+
+    const postLocaleData = () => {
+        var item = JSON.parse(localStorage.getItem('progressDataNew') || "[]");
+        // hereeeeeeeeeeeeeeeeeeee
+        const id = localStorage.getItem('id') || "";
+
+        const config = {
+            deviceId: localStorage.getItem('id')
+        };
+        if (item.length > 0) {
+            item.map((data, index) =>
+                axios.post(scoreApi, data, config).then(response => {
+                    console.log(response);
+                })
+            )
+            localStorage.removeItem("progressDataNew");
+        }
+    }
+    const submitHandler = e => {
+
+        console.log(localStorage.getItem('id'));
+        console.log(localStorage.getItem(config));
+        e.preventDefault();
+        axios.post('https://api-staging.languagebest.com/api/Registration/register', inputData, config)
             .then(response => {
                 if (response.data.isResultExist === true) {
-                    alert("Welcom " + inputData.email);
+                    alert("Welcome " + inputData.email);
                     props.handleClose();
                     token1 = response.data.result.token;
+                    actions({
+                        type: 'setToken',
+                        payload: {
+                            ...globale,
+                            token: token1,
+                            email: inputData.email
+                        }
+                    });
+                    localStorage.setItem('userToken', token1);
+                    //   postLocaleData();
                 }
 
-                console.log(token1);
-                console.log(response);
             })
             .catch(error => {
                 alert(error);

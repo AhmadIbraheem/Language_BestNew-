@@ -9,7 +9,6 @@ import QuestionText from './Components/Questions/QuestionText/QuestionText';
 import Profile from './Components/Profile/Profile'
 import Result from './Components/Result/Result';
 import { useEffect, useState } from 'react';
-import firebase from './service/firebase';
 import LoginGo from './Components/Login/LoginGo';
 import LevelsRFC from './Components/Levels/LevelsRFC';
 
@@ -22,38 +21,67 @@ import Login from './Components/Login/Login';
 import NavigationBar from './Components/NavigationBar/NavigationBar';
 import ProfileNew from './Components/Profile/ProfileNew';
 import Qqqq from './Components/Questions/QuestionAudio/Qqqq';
+import Uid from './Components/uid';
+// import Firebase from './Firebase';
+// import firebase from 'firebase/compat/app';
+// import 'firebase/messaging';
 function App() {
 
   const store = useGlobalState();
 
-  // const [user, setUser] = useState(null);
-
   // useEffect(() => {
-  //   firebase.auth().onAuthStateChanged(user => {
-  //     setUser(user);
-  //   })
+  //   const messaging = Firebase.messaging();
+  //   messaging.requestPermission()
+  //     .then(function () {
+  //       console.log('have permision');
+  //       return messaging.getToken();
+  //     })
+  //     .then(function (token) {
+  //       console.log(token);
+  //     })
+  //     .catch(function (err) {
+  //       console.log("errordf");
+  //     })
+  // }, []);
+  // useEffect(() => {
+  //   const messaging = firebase.messaging();
+  //   messaging.requestPermission()
+  //     .then(function () {
+  //       console.log('havr permision');
+  //       return messaging.getToken();
+  //     })
+  //     .then(function (token) {
+  //       console.log(token);
+  //     })
+  //     .catch(function (err) {
+  //       console.log("errordf");
+  //     })
   // }, [])
   // console.log(user);
-  return (
 
+  // const messaging = firebase.messaging();
+  // messaging.requestPermission()
+  //     .then(function () {
+  //         console.log('havr permision');
+  //         return messaging.getToken();
+  //     })
+  //     .then(function (token) {
+  //         console.log(token);
+  //     })
+  //     .catch(function (err) {
+  //         console.log("errordf");
+  //     })
+
+  return (
+    // "homepage": "https://staging.languagebest.com/",
     <Context.Provider value={store}>
       <div className="App">
-        {/* <List /> */}
-        {/* <List />
-        <Form1 /> */}
-        {/* <LoginGo /> */}
-        {/* <ProfileNew/> */}
-
-
-        {/* <Qqqq /> */}
-
-
-
+        {/* <LoginGo />
+        <Login/> */}
         <Router>
           <NavigationBar />
           <Route path="/" exact component={HomeMain} />
           <Route path="/list" component={List} />
-          <Route to="/form1" component={Form1} />
           <Route path="/levels" component={Levels} />
           <Route path="/levelsrfc" component={LevelsRFC} />
           <Route path="/login" component={Login} />

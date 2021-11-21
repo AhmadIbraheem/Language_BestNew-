@@ -53,30 +53,28 @@ export default function Intro() {
                         >لدي حساب مسبقا
                         </div>
                     </div>
-                    {/* <div className="downloadBtns">
-                        <a href="">appstore</a>
-                        <a href="">goolge</a>
-                    </div> */}
-
                     <div className="btns">
-                        {/* <h2> يمكنك تحميل التطبيق مباشرة من خلال الروابط</h2> */}
-                        <a href="#home">
-                            <img src="assets/app-store-badge.svg"
-                                className="downloadBtn"
-                                id="apple"
-                                alt="" />
-                        </a>
-                        <a href="#home">
-                            <img src="assets/google-play-badge.svg"
-                                className="download_button downloadBtn"
-                                alt="" />
-                        </a>
+
+                        <div className="appsContainer">
+                            <a href="https://play.google.com/store/apps/details?id=com.mkz.languagebest">
+                                <img src="assets/google-play-badge.svg"
+                                    className="download_button downloadBtn"
+                                    alt="" />
+                            </a>
+                            <span id="appsText">  حمل التطبيق الاّن</span>
+                        </div>
+                        <div className="appsContainer">
+                            <a href="#home">
+                                <img src="assets/app-store-badge.svg"
+                                    className="downloadBtn"
+                                    id="apple"
+                                    alt="" />
+                            </a>
+                            <span id="appsText"> قريبا على المتجر </span>
+                        </div>
                     </div>
                 </div>
-                {/* <a href="#whyLb"
-                    id="arrow">
-                    <img src="assets/icons8-expand-arrow-50.png" alt="" />
-                </a> */}
+
             </div>
             {isLoginOpen && <Login handleClose={toggleLogin}
                 setIsLoginOpen={setIsLoginOpen}

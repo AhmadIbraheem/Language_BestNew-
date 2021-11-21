@@ -42,7 +42,7 @@ export default function Form() {
 
     const subLevelId = (globale.subLevelId > 0) ? globale.subLevelId : localStorage.getItem('subLevelId');
     // const subLevelId = "b6c5c231-99b5-47f7-a2d5-50d70fb4b884";
-    const api = "https://staging.languagebest.com/api/Questions/all/" + subLevelId;
+    const api = "https://api-staging.languagebest.com/api/Questions/all/" + subLevelId;
     // this api used to view image and audio questions
     //const tryapi = "https://staging.languagebest.com/api/Questions/all/915e3c81-aa21-41e7-a1d2-4c057eb6024d"
 
@@ -93,6 +93,7 @@ export default function Form() {
     const [choosedAnswer, setChoosedAnswer] = useState("");
     const [audioOrder, setAudioOrder] = useState("");
     const [audioAnswer, setAudioAnswer] = useState("");
+    const [isHidden, setIsHidden] = useState(false);
     // console.log(maxProgress);
     // in case TRUE answer:
     // 1. increase score to calculate the final result
@@ -160,6 +161,7 @@ export default function Form() {
                 setAudioOrder={setAudioOrder}
                 audioOrder={audioOrder}
                 setChoosedAnswer={setChoosedAnswer}
+                handleAnswer={handleAnswer}
             />;
             case 'Normal': return <QuestionText
                 setIsFalse={setIsFalse}
@@ -172,6 +174,7 @@ export default function Form() {
                 setScore={setScore}
                 score={score}
                 setChoosedAnswer={setChoosedAnswer}
+                handleAnswer={handleAnswer}
             />;
             case 'WithImages': return <QuestionImage
                 setIsFalse={setIsFalse}
@@ -184,6 +187,8 @@ export default function Form() {
                 setScore={setScore}
                 score={score}
                 setChoosedAnswer={setChoosedAnswer}
+
+                handleAnswer={handleAnswer}
             />;
             default: return <Result score={score} />
 
@@ -196,29 +201,24 @@ export default function Form() {
 
             <div className="question">
                 {handleRender(questions2[questionToRender].questionType, questionToRender)}
-                {/* {console.log(questions2[questionToRender].questionType)}
-                {console.log(questions2[questionToRender])}
-                {console.log(questions2[questionToRender].answers)} */}
             </div>
 
-            <div className="breaker"></div>
-            {/* <List /> */}
+            {/* <div className="breaker"></div> */}
+
             <div className="footer">
-                {/* <QuizFooter
-          msg="aaa"
-          questionToRender={questionToRender}
-          setQuestionToRender={setQuestionToRender} /> */}
+
                 <div className="quizFooter">
-                    <div className="btns">
+                    {/* <div className={isHidden ? "hedden" : "btns"}>
                         <div className="pass"
                             onClick={hanldePass}>
 
-                            تخط  !!           </div>
+                            تخط  !!
+                        </div>
                         <div className="check"
                             onClick={handleAnswer}>
                             تحقق
                         </div>
-                    </div>
+                    </div> */}
                     <div className="result">
                         <div className="popup-box">
                             {IsTrue && <CorrectAnswer
