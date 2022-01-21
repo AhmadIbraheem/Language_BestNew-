@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Signup.css';
 import axios from 'axios';
 import Context from '../../Store/Context';
-import { signInWithGoogle } from '../../Firebase';
+import { signupWithGoogle } from '../../Firebase';
 import { useContext } from 'react';
 
 export default function Signup(props) {
@@ -158,7 +158,10 @@ export default function Signup(props) {
                                 <input type="submit" value="إنشاء حساب" />
                             </div>
                             <div className="intro_button"
-                                onClick={signInWithGoogle}>
+                                onClick={() => {
+                                    signupWithGoogle();
+                                    props.handleClose();
+                                }}>
                                 <div className="googleImage"><img src="assets/google_icon-icons.png" alt="" /></div>
                                 <div className="googleText">تسجيل الدخول</div>
                             </div>

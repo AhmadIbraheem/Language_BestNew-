@@ -10,6 +10,9 @@
   justify-content: center;
   color: var(--dark_blue);
 }
+.question1 .questionText h1 {
+  font-size: 1.7em;
+}
 .question1 .gridContainer {
   display: grid;
   grid-template-columns: auto auto;

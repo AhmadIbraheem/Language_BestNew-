@@ -1,18 +1,32 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 
 import './Intro.css'
 import Login from '../../Login/Login';
 import Signup from '../../Signup/Signup';
-export default function Intro() {
+import Context from '../../../Store/Context';
+import PopUp from '../../popUp/PopUp';
 
-    const [isLoginOpen, setIsLoginOpen] = useState(false);
-    const [isSignupOpen, setIsSignupOpen] = useState(false);
+export default function Intro() {
+    const { globale } = useContext(Context);
+    const [isLoginOpen, setIsLoginOpen] = useState(globale.isOpen);
+    const [isSignupOpen, setIsSignupOpen] = useState(globale.isOpen);
     const toggleLogin = () => {
         setIsLoginOpen(!isLoginOpen);
     }
     const toggleSignup = () => {
         setIsSignupOpen(!isSignupOpen);
     }
+    const togglePopUp = () => {
+        setPopUp(!popUp);
+    }
+    const [popUp, setPopUp] = useState((localStorage.getItem('popUp')) ? localStorage.getItem('popUp') : false)
+    // const [popUp, setPopUp] = useState(localStorage.getItem('popUp'))
+
+    // useEffect(() => {
+
+    //     window.location.reload(false);
+    // }, [popUp])
+
     // const textRef = useRef();
     // useEffect(
     //     () => {
@@ -83,6 +97,7 @@ export default function Intro() {
             {isSignupOpen && <Signup handleClose={toggleSignup}
                 setIsLoginOpen={setIsLoginOpen}
                 setIsSignupOpen={setIsSignupOpen} />}
+            {popUp && <PopUp handleClose={togglePopUp} />}
 
         </div>
     )

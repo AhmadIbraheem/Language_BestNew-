@@ -19,7 +19,7 @@
 .levelDemo .levels .level {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
 
   margin-bottom: 5%;
 
@@ -36,6 +36,7 @@
   height: 30%;
   /* border: solid 2px; */
   margin-top: 5%;
+  margin-bottom: 9%;
   /* border-radius: 100%; */
   /* border: var(--middle_blue) 1px solid; */
   /* background-color: var(--grey); */
@@ -63,6 +64,7 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+
   /* align-self: center; */
 }
 .levelDemo .levels .level .subLevels .subLevel {
@@ -72,6 +74,7 @@
   margin-bottom: 14%;
   width: 150px;
   height: 150px;
+  margin-bottom: 15%;
 }
 .levelDemo .levels .level .subLevels .subLevel img {
   border-radius: 100%;
@@ -80,6 +83,7 @@
 }
 .levelDemo .levels .level .subLevels .subLevel h3 {
   text-align: center;
+  font-size: 15px;
   color: var(--dark_blue);
 }
 .levelDemo .levels .level .subLevels .subLevel .imageDiv {
@@ -168,6 +172,9 @@
   .levelDemo .levels .level .subLevels .subLevel {
     width: 120px;
   }
+  .levelDemo .levels .level .subLevels .subLevel h3 {
+    font-size: 0.8rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -206,5 +213,8 @@
 
   .levelDemo .levels .level .subLevels .subLevel {
     width: 120px;
+  }
+  .levelDemo .levels .level .subLevels .subLevel h3 {
+    font-size: 0.8rem;
   }
 }

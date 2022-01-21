@@ -29,7 +29,7 @@ export default function Profile() {
                     "Authorization": `Bearer ${token}`
                 }
             });
-            // console.log(response);
+            console.log(response);
             // setProfileInfo(response.data.result);
             return response;
         }
@@ -110,7 +110,8 @@ export default function Profile() {
                                         <div className="level">
                                             <CircularProgressbarWithChildren value={level.score}>
                                                 <img
-                                                    src={level.image.url}
+                                                    src={level.imageUrl}
+                                                    // src={level.image.url == "undefined" ? "assets/websiteImage.png" : "assets/websiteImage.png"}
                                                     alt="doge"
                                                 />
 

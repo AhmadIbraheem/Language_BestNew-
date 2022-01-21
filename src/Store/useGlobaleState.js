@@ -4,6 +4,7 @@ const useGlobalState = () => {
 
     const [globale, setGlobale] = useState({
         value: "ahmad",
+        isOpen: false,
         token: "token",
         subLevelId: "subLevel",
         levelId: "levelId",
@@ -24,6 +25,8 @@ const useGlobalState = () => {
             case 'setEmail':
                 return setGlobale(payload);
             case 'setTries':
+                return setGlobale(payload);
+            case 'setIsOpen':
                 return setGlobale(payload);
             default:
                 return globale;

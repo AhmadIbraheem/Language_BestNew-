@@ -120,7 +120,10 @@ function Login(props) {
                                 <input type="submit" value="تسجيل الدخول" />
                             </div>
                             <div className="intro_button"
-                                onClick={signInWithGoogle}>
+                                onClick={() => {
+                                    signInWithGoogle();
+                                    props.handleClose()
+                                }}>
                                 <div className="googleImage"><img src="assets/google_icon-icons.png" alt="" /></div>
                                 <div className="googleText">تسجيل الدخول</div>
                             </div>

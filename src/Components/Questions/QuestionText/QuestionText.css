@@ -28,6 +28,10 @@
   color: #333;
   border-radius: 40px;
 }
+
+.quizeQuestion .right h1 {
+  font-size: 1.5em;
+}
 /* .quizeQuestion .right h1{
     color: #FFAA4C;
 } */
