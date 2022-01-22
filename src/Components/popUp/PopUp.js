@@ -6,7 +6,11 @@ export default function PopUp(props) {
             <div class="alert" dir='rtl'>
                 هذا المستخدم مسجل مسبقا يرجى المحاولة بحساب اخر.
                 <span class="closebtn"
-                    onClick={props.handleClose}
+                    onClick={() => {
+                        props.handleClose();
+                        localStorage.removeItem('popUp');
+                        props.setPopUp(false);
+                    }}
                 >
                     &times;
                 </span>

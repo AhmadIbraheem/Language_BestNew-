@@ -43,3 +43,17 @@
 .closebtn:hover {
   color: black;
 }
+
+@media (max-width: 728px) {
+  .popup-box {
+    width: 50%;
+    top: 5%;
+    align-items: center;
+    left: 20%;
+  }
+  .alert span {
+    position: absolute;
+    top: 5%;
+    left: 80%;
+  }
+}

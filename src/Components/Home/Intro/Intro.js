@@ -97,7 +97,8 @@ export default function Intro() {
             {isSignupOpen && <Signup handleClose={toggleSignup}
                 setIsLoginOpen={setIsLoginOpen}
                 setIsSignupOpen={setIsSignupOpen} />}
-            {popUp && <PopUp handleClose={togglePopUp} />}
+            {popUp && <PopUp handleClose={togglePopUp}
+                setPopUp={setPopUp} />}
 
         </div>
     )
